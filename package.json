@@ -1,0 +1,58 @@
+{
+  "name": "n8n-nodes-discord-compatible",
+  "version": "0.1.0",
+  "description": "n8n community node that mirrors the built-in Discord node (Message, Channel, Member + Webhook) against any Discord-compatible API, selected by a configurable base URL (Discord, Fluxer, Spacebar).",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "discord",
+    "fluxer",
+    "chat",
+    "messaging"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Danny de Bruijne",
+    "email": "1065989+ddebruijne@users.noreply.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ddebruijne/n8n-nodes-discord-compatible.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && npm run copy:icons",
+    "copy:icons": "node scripts/copy-icons.mjs",
+    "dev": "tsc --watch",
+    "lint": "eslint \"nodes/**/*.ts\" \"credentials/**/*.ts\"",
+    "lint:fix": "eslint \"nodes/**/*.ts\" \"credentials/**/*.ts\" --fix",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/DiscordCompatibleApi.credentials.js",
+      "dist/credentials/DiscordCompatibleWebhookApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/DiscordCompatible/DiscordCompatible.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "eslint": "^8.57.1",
+    "eslint-plugin-n8n-nodes-base": "^2.0.0",
+    "n8n-workflow": "*",
+    "typescript": "^5.7.0"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  },
+  "dependencies": {
+    "form-data": "^4.0.6"
+  }
+}

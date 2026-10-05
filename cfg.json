@@ -1,0 +1,87 @@
+{
+  "env": {
+    "node": true,
+    "es2021": true
+  },
+  "globals": {},
+  "parser": "/opt/data/projects/n8n-nodes-discord-compatible/node_modules/@typescript-eslint/parser/dist/index.js",
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module",
+    "project": [
+      "./tsconfig.json"
+    ]
+  },
+  "plugins": [
+    "n8n-nodes-base"
+  ],
+  "rules": {
+    "n8n-nodes-base/node-param-options-type-unsorted-items": [
+      "off"
+    ],
+    "n8n-nodes-base/community-package-json-author-email-still-default": [
+      "error"
+    ],
+    "n8n-nodes-base/community-package-json-author-missing": [
+      "error"
+    ],
+    "n8n-nodes-base/community-package-json-author-name-missing": [
+      "error"
+    ],
+    "n8n-nodes-base/community-package-json-author-name-still-default": [
+      "error"
+    ],
+    "n8n-nodes-base/community-package-json-description-missing": [
+      "error"
+    ],
+    "n8n-nodes-base/community-package-json-description-still-default": [
+      "error"
+    ],
+    "n8n-nodes-base/community-package-json-keywords-missing": [
+      "error"
+    ],
+    "n8n-nodes-base/community-package-json-keywords-without-official-tag": [
+      "error"
+    ],
+    "n8n-nodes-base/community-package-json-license-missing": [
+      "error"
+    ],
+    "n8n-nodes-base/community-package-json-license-not-default": [
+      "error"
+    ],
+    "n8n-nodes-base/community-package-json-n8n-api-version-missing": [
+      "error"
+    ],
+    "n8n-nodes-base/community-package-json-n8n-api-version-not-number": [
+      "error"
+    ],
+    "n8n-nodes-base/community-package-json-n8n-missing": [
+      "error"
+    ],
+    "n8n-nodes-base/community-package-json-n8n-nodes-empty": [
+      "error"
+    ],
+    "n8n-nodes-base/community-package-json-n8n-nodes-missing": [
+      "error"
+    ],
+    "n8n-nodes-base/community-package-json-name-missing": [
+      "error"
+    ],
+    "n8n-nodes-base/community-package-json-name-still-default": [
+      "error"
+    ],
+    "n8n-nodes-base/community-package-json-repository-url-still-default": [
+      "error"
+    ],
+    "n8n-nodes-base/community-package-json-version-missing": [
+      "error"
+    ]
+  },
+  "settings": {},
+  "ignorePatterns": [
+    ".eslintrc.js",
+    "dist/**",
+    "node_modules/**",
+    "scripts/**"
+  ]
+}
