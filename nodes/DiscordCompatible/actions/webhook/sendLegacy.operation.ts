@@ -96,10 +96,12 @@ export async function execute(this: IExecuteFunctions): Promise<INodeExecutionDa
 			const content = this.getNodeParameter('content', i) as string;
 			const options = prepareOptions(this.getNodeParameter('options', i, {}));
 
-			const embeds = (this.getNodeParameter('embeds', i, undefined) as IDataObject)?.values as
+			// Fallback must not be an explicit `undefined`: n8n throws a UserError when a
+			// parameter that was never set resolves to undefined
+			const embeds = (this.getNodeParameter('embeds', i, {}) as IDataObject).values as
 				| IDataObject[]
 				| undefined;
-			const files = (this.getNodeParameter('files', i, undefined) as IDataObject)?.values as
+			const files = (this.getNodeParameter('files', i, {}) as IDataObject).values as
 				| IDataObject[]
 				| undefined;
 
