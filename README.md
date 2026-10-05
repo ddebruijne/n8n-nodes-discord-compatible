@@ -11,9 +11,14 @@ Everything is a normal n8n node: no core patches, installable as a community nod
 
 ## Install
 
-Not on the npm registry yet. Two ways to install today:
+On the npm registry: **Settings → Community nodes → Install** and enter
+`n8n-nodes-discord-compatible`, or in a self-hosted n8n install:
 
-**From source** (works now):
+```bash
+npm install n8n-nodes-discord-compatible
+```
+
+**From source** (if you want to hack on it):
 
 ```bash
 git clone https://github.com/ddebruijne/n8n-nodes-discord-compatible.git
@@ -27,9 +32,6 @@ Then point your n8n at the checkout and restart it:
 ```bash
 N8N_CUSTOM_EXTENSIONS=/absolute/path/to/n8n-nodes-discord-compatible n8n start
 ```
-
-**From npm** (once published): **Settings → Community nodes → Install** and enter
-`n8n-nodes-discord-compatible`, or `npm install n8n-nodes-discord-compatible` in your n8n install.
 
 Note that n8n's Community Nodes UI installs from the npm registry only — a GitHub URL will not work
 there, even though the repo is public.
